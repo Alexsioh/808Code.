@@ -1,0 +1,171 @@
+:root {
+    --fuentePrincipal: 'Fira Code', sans-serif;
+
+    /* Fondos */
+    --fondoPrimario: #FFFFFF;
+    --fondoSecundario: #F5F5F5;
+
+    /* Texto */
+    --textoPrincipal: #0B132B;
+    --textoSecundario: #4B5563;
+
+    /* Acentos */
+    --acentoPrimario: #6C63FF;
+    --acentoSecundario: #FF6B35;
+    --acentoDetalles: #3ABEFF;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* Globales*/
+
+.contenedor{
+    max-width: 150rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+h1,h2,h3,h4,a{
+    font-family: var(--fuentePrincipal);
+    line-height: 1.2;
+    color: var(--textoPrincipal);
+}
+
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+a{
+    font-size: 2.4rem;
+}
+img{
+    max-width: 100%;
+}
+p{
+    font-size: 2.5rem;
+}
+
+li, a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.btn{
+    border: 1px solid var(--textoPrincipal);
+    padding: 0.5rem 1rem;
+}
+
+.azul{
+    color: var(--acentoPrimario);
+}
+
+
+/*Header*/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.header__logo{
+    width: 20rem;
+    height: 5rem;
+    margin: 1.5rem;
+}
+
+.navegacion{
+    display: flex;
+    gap: 2.5rem;
+}
+
+
+
+
+
+
+.hero{
+    display: flex;
+    gap: 12rem;
+    margin: 5rem auto 8rem auto;
+}
+
+.naranja{
+    color: var(--acentoSecundario);
+}
+
+
+
+.identidad{
+    text-decoration: underline;
+}
+
+.hero-img img{
+    
+    max-width: 700px;
+    height: auto;
+    min-width: 400px; /* fuerza el mínimo */
+    flex-shrink: 0; /* evita que se encoja dentro de un flexbox */
+}
+
+
+
+
+
+.servicios__contenedor{
+    background-color: var(--fondoSecundario);
+}
+
+.servicios__titulo{
+    padding-top: 5rem;
+    margin: 0 auto 10rem auto;
+    text-align: center;
+}
+
+.servicios__lista{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem;
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* vertical */
+    justify-content: center; /* horizontal */
+    
+}
+
+.servicio__titulo{
+    padding: 3rem 0;
+    text-align: center;
+    
+}
+
+.imagen_servicio{
+    max-height: 450rem;
+    max-width: 400;
+}
