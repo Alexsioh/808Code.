@@ -133,39 +133,244 @@ li, a{
 
 
 
+.servicios__contenedor {
+    background-color: var(--fondoSecundario); /* Fondo del contenedor principal (usa variable de color) */
+    padding-bottom: 5rem; /* Espaciado inferior para separar del siguiente bloque */
+}
+
+.servicios__titulo {
+    padding-top: 5rem; /* Espaciado superior del título */
+    margin: 0 auto 10rem auto; /* Centrado horizontal y separación inferior grande */
+    text-align: center; /* Centra el texto */
+}
+
+/* ====== GRID PRINCIPAL ====== */
+.servicios__lista {
+    display: grid; /* Activa el sistema de cuadrícula */
+    grid-template-columns: repeat(3, 1fr); /* Divide en 3 columnas iguales en escritorio */
+    gap: 6rem; /* Espaciado entre columnas y filas */
+}
+
+/* ====== ESTILOS DE CADA SERVICIO ====== */
+.servicio {
+    display: flex; /* Usa flexbox dentro de cada tarjeta */
+    flex-direction: column; /* Acomoda elementos en columna */
+    align-items: center; /* Centra horizontalmente los elementos */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Alinea texto en el centro */
+    background-color: #fff; /* Fondo blanco para cada cuadro */
+    padding: 2rem; /* Espaciado interno dentro del cuadro */
+    box-shadow: 0 2px 2px var(--acentoSecundario);
+}
+
+.servicio__titulo {
+    padding: 3rem 0 1.5rem 0; /* Espaciado superior e inferior del título */
+    text-align: center; /* Centra el título */
+}
+
+.imagen_servicio {
+    max-width: 250px; /* Tamaño máximo de la imagen en escritorio */
+    height: auto; /* Mantiene proporciones */
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 992px) {
+    .servicios__lista {
+        grid-template-columns: 1fr 1fr; /* Pasa a 2 columnas */
+        gap: 4rem; /* Reduce el espacio entre cuadros */
+    }
+    .imagen_servicio {
+        max-width: 200px; /* Imagen más pequeña */
+    }
+}
+
+/* Móviles (pantallas pequeñas) */
+@media (max-width: 576px) {
+    .servicios__lista {
+        grid-template-columns: 1fr; /* Se convierte en una sola columna */
+        gap: 3rem; /* Menor espacio entre cuadros */
+    }
+    .imagen_servicio {
+        max-width: 180px; /* Imagen más reducida */
+    }
+    .servicios__titulo {
+        font-size: 2.2rem; /* Ajusta tamaño del título principal */
+    }
+    .servicio__titulo {
+        font-size: 1.8rem; /* Ajusta título de cada servicio */
+    }
+    .servicio__texto {
+        font-size: 1.4rem; /* Ajusta texto descriptivo */
+    }
+}
 
 
-.servicios__contenedor{
+.proyectos__titulo{
+    text-align: center;
+}
+
+
+
+
+
+
+/* SECCION PLANES */
+
+.planes {
+    text-align: center;
+    padding: 4rem 0;
     background-color: var(--fondoSecundario);
 }
 
-.servicios__titulo{
-    padding-top: 5rem;
-    margin: 0 auto 10rem auto;
-    text-align: center;
+.planes__titulo {
+    margin-bottom: 3rem;
 }
 
-.servicios__lista{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 6rem;
-}
-
-.servicio{
+.planes__contenedores {
     display: flex;
-    flex-direction: column;
-    align-items: center;    /* vertical */
-    justify-content: center; /* horizontal */
+    justify-content: space-evenly;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: var(--fondoPrimario);
+    box-shadow: 0 2px 2px var(--acentoSecundario);
+    padding: 2rem;
+    max-width: 40rem;
+    flex: 1;
+}
+
+.plan__titulo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--textoPrincipal);
+}
+
+.plan__descripcion {
+    font-size: 1.4rem;
+    color: var(--textoSecundario);
+    margin-bottom: 2rem;
+}
+
+.plan__caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    color: var(--texto-secundario);
     
 }
 
-.servicio__titulo{
-    padding: 3rem 0;
-    text-align: center;
+.plan__caracteristicas li {
+    border-bottom: 1px solid var(--textoPrincipal);
+    padding: 1rem 0;
     
 }
 
-.imagen_servicio{
-    max-height: 450rem;
-    max-width: 400;
+.plan__boton {
+    background-color: var(--acentoDetalles);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background-color .3s ease;
+}
+
+.plan__boton:hover {
+    background-color: var(--acentoSecundario);
+}
+
+.planes__extra {
+    margin-top: 2rem;
+}
+
+.planes__info {
+    background: transparent;
+    border: 2px solid var(--textoPrincipal);
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.planes__info:hover {
+    background-color: var(--blanco);
+}
+
+
+
+
+
+/* ====== SECCIÓN PROCESO GENERAL ====== */
+.proceso {
+    padding: 4rem 0;           /* Espaciado superior e inferior */
+    text-align: center;        /* Centra el texto dentro de la sección */
+}
+
+.proceso__titulo {
+    font-size: 2.8rem;         /* Tamaño grande para el título */
+    margin-bottom: 3rem;       /* Espacio inferior */
+    color: var(--textoPrincipal); /* Color principal definido en variables */
+}
+
+/* ====== ESTILOS DE CADA PASO ====== */
+.proceso__paso {
+    display: grid;                           /* Usa grid para organizar contenido */
+    grid-template-columns: repeat(2, 1fr);   /* Dos columnas de igual tamaño */
+    align-items: center;                     /* Centra verticalmente los elementos */
+    gap: 5rem;                               /* Espacio entre columnas */
+    margin-bottom: 3rem;                     /* Espacio inferior entre pasos */
+}
+
+/* ====== TEXTO DE CADA PASO ====== */
+.proceso__texto {
+    background-color: var(--blanco);         /* Fondo blanco */
+    border: 1px solid #ddd;                  /* Borde gris claro */
+    padding: 2rem;                           /* Espaciado interno */
+    text-align: left;                      /* Texto alineado a la izquierda */
+    box-shadow: 0 2px 2px var(--acentoSecundario);  /* Sombra sutil */
+}
+
+.proceso__texto h3 {
+    font-size: 1.8rem;      /* Tamaño intermedio para subtítulos */
+    margin: 0.5rem 0 1rem;  /* Margen superior pequeño e inferior mediano */
+}
+
+.proceso__texto p {
+    font-size: 1.4rem;          /* Tamaño de texto */
+    color: var(--textoSecundario); /* Color más tenue definido en variables */
+}
+
+/* ====== NÚMERO DEL PASO ====== */
+.proceso__numero {
+    display: inline-block;          /* Se comporta como bloque en línea */
+    background: var(--acentoDetalles);            /* Fondo lila claro */
+    color: var(--textoPrincipal);                 /* Texto oscuro */
+    font-weight: bold;              /* Negrita */
+    padding: 0.5rem 1rem;           /* Relleno interno */
+    border-radius: 4px;             /* Bordes redondeados */
+    font-size: 1.6rem;              /* Tamaño de fuente */
+}
+
+/* ====== IMAGEN DEL PASO ====== */
+.proceso__imagen img {
+    width: 100%;         /* Imagen ocupa todo el ancho disponible */
+    border-radius: 6px;  /* Bordes redondeados */
+    object-fit: cover;   /* Ajusta la imagen sin deformarla */
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 768px) {
+    .proceso__paso {
+        grid-template-columns: 1fr;   /* Una sola columna en móviles */
+    }
+    .proceso__imagen {
+        order: 1; /* Mueve las imágenes arriba en móviles */
+    }
 }
