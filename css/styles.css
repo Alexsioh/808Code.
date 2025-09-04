@@ -13,6 +13,9 @@
     --acentoPrimario: #6C63FF;
     --acentoSecundario: #FF6B35;
     --acentoDetalles: #3ABEFF;
+
+    --sizeSeccion: 2.8rem
+
 }
 
 html{
@@ -28,6 +31,7 @@ body{
     font-family: var(--fuentePrincipal);
     font-size: 1.6rem;
     line-height: 2;
+    
 }
 
 /* Globales*/
@@ -47,13 +51,13 @@ h1,h2,h3,h4,a{
 }
 
 h1{
-    font-size: 6rem;
+    font-size: 5rem;
 }
 h2{
-    font-size: 4rem;
+    font-size: 2.8rem;
 }
 h3{
-    font-size: 3.2rem;
+    font-size: 2rem;
 }
 h4{
     font-size: 2.8rem;
@@ -65,7 +69,7 @@ img{
     max-width: 100%;
 }
 p{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
 }
 
 li, a{
@@ -81,226 +85,547 @@ li, a{
 .azul{
     color: var(--acentoPrimario);
 }
-
-
-/*Header*/
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-}
-
-.header__logo{
-    width: 20rem;
-    height: 5rem;
-    margin: 1.5rem;
-}
-
-.navegacion{
-    display: flex;
-    gap: 2.5rem;
-}
-
-
-
-
-
-
-.hero{
-    display: flex;
-    gap: 12rem;
-    margin: 5rem auto 8rem auto;
-}
-
 .naranja{
     color: var(--acentoSecundario);
 }
 
 
-
-.identidad{
-    text-decoration: underline;
+/* HEADER GENERAL */
+/* HEADER DESKTOP */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 0;
+  background: white;
+  border: 2px solid var(--acentoDetalles);
+  border-top: none; /* pegado arriba */
+  border-radius: 0 0 1rem 1rem; /* esquinas redondeadas abajo */
+  padding: 1rem 2rem;
+  position: fixed; /* se queda fijo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
-.hero-img img{
-    
-    max-width: 700px;
+/* Wrapper para centrar y limitar ancho */
+.header .contenedor {
+  max-width: 150rem;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Para que el contenido no quede oculto debajo del header */
+body {
+  padding-top: 100px; /* ajusta según la altura real del header */
+}
+
+/* Logo */
+.header__logo {
+  width: 20rem;
+  height: auto;
+}
+
+/* Navegación en desktop */
+.navegacion {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.navegacion li a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--texto);
+  transition: color 0.3s ease;
+}
+
+.navegacion li a:hover {
+  color: var(--acentoSecundario);
+}
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+/* ====== MOBILE ====== */
+@media (max-width: 827px) {
+  /* Ocultamos menú por defecto */
+  .header__navegacion {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* ocupa toda la pantalla */
+    background: white;
+    border-top: 2px solid var(--acentoSecundario);
+    border-bottom: 2px solid var(--acentoSecundario);
+    text-align: center;
+    padding: 5rem 2rem;
+    z-index: 999; /* sobre todo */
+  }
+
+  /* Menú vertical centrado */
+  .navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    height: 100%;
+  }
+
+  .navegacion li a {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: block;
+    font-size: 2.8rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    z-index: 1000; /* sobre el menú */
+  }
+
+  /* Menú activo */
+  .header__navegacion.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+/* HERO GENERAL */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    min-height: 90vh; /* ocupa casi toda la pantalla */
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* TEXTO */
+.hero-texto {
+    flex: 1;
+}
+
+.hero-texto h1 {
+
+    line-height: 1.2;
+}
+
+.hero-texto p {
+    margin: 2rem 0;
+    color: var(--texto-secundario);
+}
+
+.hero-texto .btn {
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+}
+
+/* IMAGEN */
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 600px;
     height: auto;
-    min-width: 400px; /* fuerza el mínimo */
-    flex-shrink: 0; /* evita que se encoja dentro de un flexbox */
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        min-height: 100vh; /* ocupa toda la pantalla en móvil */
+        gap: 2rem;
+    }
+
+    .hero-texto h1 {
+        font-size: 3rem;
+    }
+
+    .hero-texto p {
+        font-size: 1.8rem;
+    }
+
+    .hero-texto .btn {
+        font-size: 1.5rem;
+    }
+
+    .hero-img img {
+        max-width: 100%;
+        width: 90%;
+    }
 }
 
 
+
+
+
+
+
+/* ====== GRID PRINCIPAL ====== */
 
 .servicios__contenedor {
-    background-color: var(--fondoSecundario); /* Fondo del contenedor principal (usa variable de color) */
-    padding-bottom: 5rem; /* Espaciado inferior para separar del siguiente bloque */
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--fondoSecundario);
 }
 
+/* Título */
 .servicios__titulo {
-    padding-top: 5rem; /* Espaciado superior del título */
-    margin: 0 auto 10rem auto; /* Centrado horizontal y separación inferior grande */
-    text-align: center; /* Centra el texto */
+    margin-bottom: 2rem;
+}
+
+/* Texto descriptivo bajo el título */
+.servicios__descripcion {
+    max-width: 700px;
+    margin: 0 auto 6rem auto;
+    font-size: 1.6rem;
+    color: var(--texto-secundario);
+    line-height: 1.6; /* mejor legibilidad */
 }
 
 /* ====== GRID PRINCIPAL ====== */
 .servicios__lista {
-    display: grid; /* Activa el sistema de cuadrícula */
-    grid-template-columns: repeat(3, 1fr); /* Divide en 3 columnas iguales en escritorio */
-    gap: 6rem; /* Espaciado entre columnas y filas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
 }
 
-/* ====== ESTILOS DE CADA SERVICIO ====== */
+/* ====== CADA SERVICIO ====== */
 .servicio {
-    display: flex; /* Usa flexbox dentro de cada tarjeta */
-    flex-direction: column; /* Acomoda elementos en columna */
-    align-items: center; /* Centra horizontalmente los elementos */
-    justify-content: center; /* Centra verticalmente */
-    text-align: center; /* Alinea texto en el centro */
-    background-color: #fff; /* Fondo blanco para cada cuadro */
-    padding: 2rem; /* Espaciado interno dentro del cuadro */
-    box-shadow: 0 2px 2px var(--acentoSecundario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 2.5rem;
+    box-shadow: 0 2px 2px var(--acentoDetalles);
+    border-radius: 1rem;
 }
 
 .servicio__titulo {
-    padding: 3rem 0 1.5rem 0; /* Espaciado superior e inferior del título */
-    text-align: center; /* Centra el título */
+    margin: 2rem 0 1rem 0;
+    font-size: 2rem;
+    color: var(--texto-principal);
 }
 
-.imagen_servicio {
-    max-width: 250px; /* Tamaño máximo de la imagen en escritorio */
-    height: auto; /* Mantiene proporciones */
+.servicio__texto {
+    font-size: 1.5rem;
+    color: var(--texto-secundario);
+    line-height: 1.8; /* reduce el espaciado entre líneas */
 }
 
 /* ====== RESPONSIVE ====== */
-
-/* Tablets (pantallas medianas) */
-@media (max-width: 992px) {
+@media (max-width: 998px) {
     .servicios__lista {
-        grid-template-columns: 1fr 1fr; /* Pasa a 2 columnas */
-        gap: 4rem; /* Reduce el espacio entre cuadros */
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
     }
+
+    .servicio:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 400px;
+    }
+
     .imagen_servicio {
-        max-width: 200px; /* Imagen más pequeña */
+        max-width: 200px;
     }
 }
 
-/* Móviles (pantallas pequeñas) */
 @media (max-width: 576px) {
     .servicios__lista {
-        grid-template-columns: 1fr; /* Se convierte en una sola columna */
-        gap: 3rem; /* Menor espacio entre cuadros */
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
+
+    .servicio:nth-child(3) {
+        grid-column: auto;
+        max-width: 100%;
+    }
+
     .imagen_servicio {
-        max-width: 180px; /* Imagen más reducida */
+        max-width: 180px;
     }
+
     .servicios__titulo {
-        font-size: 2.2rem; /* Ajusta tamaño del título principal */
+        font-size: 2.2rem;
     }
     .servicio__titulo {
-        font-size: 1.8rem; /* Ajusta título de cada servicio */
+        font-size: 1.8rem;
     }
     .servicio__texto {
-        font-size: 1.4rem; /* Ajusta texto descriptivo */
+        font-size: 1.4rem;
+        line-height: 1.8;
     }
 }
 
+/* ====== EFECTO SCROLL EN SERVICIOS ====== */
+.servicio {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
 
-.proyectos__titulo{
-    text-align: center;
+.servicio.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
 
+
+
+
+/* ====== SECCIÓN PROYECTOS ====== */
+.proyectos {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.proyectos__titulo {
+  margin-bottom: 3rem;
+  color: var(--textoPrincipal);
+}
+
+/* Grid de proyectos */
+.proyectos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Carta de proyecto */
+.proyecto {
+  background-color: var(--fondoSecundario);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform .3s ease;
+  box-shadow: 0 4px 8px var(--acentoDetalles);
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+}
+
+.proyecto__boton {
+  display: inline-block;
+  margin: 0 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--acentoDetalles);
+  color: var(--blanco);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color .3s ease, transform .2s ease;
+}
+
+.proyecto__boton:hover {
+  background-color: var(--acentoSecundario);
+  transform: translateY(-2px);
+}
+
+.proyecto img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  display: block;
+}
+
+.proyecto__nombre {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1rem;
+  color: var(--textoPrincipal);
+}
+
+.proyecto__descripcion {
+  font-size: 1.4rem;
+  color: var(--textoSecundario);
+  margin: 0 1rem 1.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .proyectos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proyecto:last-child {
+    grid-column: span 2;       /* El último ocupa toda la fila */
+    justify-self: center;      /* Centrado */
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .proyectos__grid {
+    grid-template-columns: 1fr;
+  }
+  .proyecto:last-child {
+    grid-column: auto;
+    justify-self: auto;
+    max-width: 100%;
+  }
+}
+
+/* ====== EFECTO SCROLL EN PROYECTOS ====== */
+.proyecto {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.proyecto.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
 /* SECCION PLANES */
-
 .planes {
-    text-align: center;
-    padding: 4rem 0;
-    background-color: var(--fondoSecundario);
+  text-align: center;
+  padding: 4rem 0;
+  background-color: var(--fondoSecundario);
 }
 
 .planes__titulo {
-    margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
 }
 
+.planes__intro {
+  max-width: 70ch;
+  margin: 0 auto 4rem auto;
+  font-size: 1.6rem;
+  line-height: 1.6; /* menos espaciado */
+  color: var(--textoPrincipal);
+}
 .planes__contenedores {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 4rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+  flex-wrap: wrap;
 }
 
 .plan {
-    background-color: var(--fondoPrimario);
-    box-shadow: 0 2px 2px var(--acentoSecundario);
-    padding: 2rem;
-    max-width: 40rem;
-    flex: 1;
+  background-color: var(--fondoPrimario);
+  box-shadow: 0 2px 2px var(--acentoDetalles);
+  padding: 2rem;
+  max-width: 35rem;
+  flex: 1 1 30rem; /* se adapta de forma flexible */
+  border-radius: 1rem;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px var(--acentoSecundario);
 }
 
 .plan__titulo {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: var(--textoPrincipal);
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--textoPrincipal);
 }
 
 .plan__descripcion {
-    font-size: 1.4rem;
-    color: var(--textoSecundario);
-    margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--textoSecundario);
+  margin-bottom: 2rem;
+  line-height: 1.6; /* más compacto */
 }
 
 .plan__caracteristicas {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-    font-size: 1.4rem;
-    color: var(--texto-secundario);
-    
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: var(--textoPrincipal);
+  line-height: 1.6; /* menos espaciado */
+    text-align: left;
 }
 
 .plan__caracteristicas li {
-    border-bottom: 1px solid var(--textoPrincipal);
-    padding: 1rem 0;
-    
+  border-bottom: 1px solid #ddd;
+  padding: 0.8rem 0;
 }
 
 .plan__boton {
-    background-color: var(--acentoDetalles);
-    color: var(--blanco);
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.4rem;
-    transition: background-color .3s ease;
+  background-color: var(--acentoPrimario);
+  color: white;
+  padding: 1rem 2.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .plan__boton:hover {
-    background-color: var(--acentoSecundario);
+  background-color: var(--acentoSecundario);
 }
 
 .planes__extra {
-    margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .planes__info {
-    background: transparent;
-    border: 2px solid var(--textoPrincipal);
-    padding: 1rem 2rem;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: background-color .3s ease;
+  background: transparent;
+  border: 2px solid var(--textoPrincipal);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0.5rem;
 }
 
 .planes__info:hover {
-    background-color: var(--blanco);
+  background-color: var(--blanco);
+}
+
+/* ====== EFECTO SCROLL EN PLANES ====== */
+.plan {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.plan.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -314,27 +639,32 @@ li, a{
 }
 
 .proceso__titulo {
-    font-size: 2.8rem;         /* Tamaño grande para el título */
     margin-bottom: 3rem;       /* Espacio inferior */
     color: var(--textoPrincipal); /* Color principal definido en variables */
 }
 
 /* ====== ESTILOS DE CADA PASO ====== */
 .proceso__paso {
-    display: grid;                           /* Usa grid para organizar contenido */
-    grid-template-columns: repeat(2, 1fr);   /* Dos columnas de igual tamaño */
-    align-items: center;                     /* Centra verticalmente los elementos */
-    gap: 5rem;                               /* Espacio entre columnas */
-    margin-bottom: 3rem;                     /* Espacio inferior entre pasos */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch; /* asegura mismo alto */
+  
+  margin-bottom: 3rem;
+  max-width: 1100px;       /* límite al ancho total de cada paso */
+  margin: 0 auto 3rem;     /* centra y da separación abajo */
+  gap: 5rem;
 }
 
 /* ====== TEXTO DE CADA PASO ====== */
 .proceso__texto {
-    background-color: var(--blanco);         /* Fondo blanco */
-    border: 1px solid #ddd;                  /* Borde gris claro */
-    padding: 2rem;                           /* Espaciado interno */
-    text-align: left;                      /* Texto alineado a la izquierda */
-    box-shadow: 0 2px 2px var(--acentoSecundario);  /* Sombra sutil */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--blanco);
+  border: 1px solid #ddd;
+  text-align: left;
+  box-shadow: 0 2px 4px var(--acentoDetalles);
+  padding: 1.5rem 2rem;
 }
 
 .proceso__texto h3 {
@@ -347,22 +677,24 @@ li, a{
     color: var(--textoSecundario); /* Color más tenue definido en variables */
 }
 
-/* ====== NÚMERO DEL PASO ====== */
 .proceso__numero {
-    display: inline-block;          /* Se comporta como bloque en línea */
-    background: var(--acentoDetalles);            /* Fondo lila claro */
-    color: var(--textoPrincipal);                 /* Texto oscuro */
-    font-weight: bold;              /* Negrita */
-    padding: 0.5rem 1rem;           /* Relleno interno */
-    border-radius: 4px;             /* Bordes redondeados */
-    font-size: 1.6rem;              /* Tamaño de fuente */
+  display: inline-block;      /* Solo ocupa lo que mide el número */
+  background: var(--acentoDetalles); 
+  color: var(--textoPrincipal);
+  font-weight: bold;
+  width: 3rem;
+    height: 3rem;
+    line-height: 3rem;        /* Centrado vertical */
+    text-align: center;        /* Centrado horizontal */
+    border-radius: 1rem;        /* Círculo */
+    margin-bottom: 1rem;      /* Espacio inferior */
+    font-size: 1.6rem;        /* Tamaño del número */
 }
-
 /* ====== IMAGEN DEL PASO ====== */
 .proceso__imagen img {
-    width: 100%;         /* Imagen ocupa todo el ancho disponible */
-    border-radius: 6px;  /* Bordes redondeados */
-    object-fit: cover;   /* Ajusta la imagen sin deformarla */
+  max-height: 320px;     /* controla la altura */
+  object-fit: cover;     /* recorta sin deformar */
+  border-radius: 6px;
 }
 
 /* ====== RESPONSIVE DESIGN ====== */
@@ -373,4 +705,15 @@ li, a{
     .proceso__imagen {
         order: 1; /* Mueve las imágenes arriba en móviles */
     }
+}
+
+.servicio, .proyecto, .plan, .proceso__paso {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }

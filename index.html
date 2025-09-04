@@ -15,18 +15,24 @@
 <body>
     
     <header class="header contenedor">
-        <img class="header__logo" src="img/logo-svg.svg" alt="808code logo">
-        <div class="header__navegacion">    
-            <nav>
-                <ul class="navegacion">
-                    <li><span class="azul">#</span><a href="#inicio">inicio</a></li>
-                    <li><span class="azul">#</span><a href="#proyectos">proyectos</a></li>
-                    <li><span class="azul">#</span><a href="#acerca">acerca de</a></li>
-                    <li><span class="azul">#</span><a href="#contacto">contactanos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <img class="header__logo" src="img/logo-svg.svg" alt="808code logo">
+
+  <!-- Botón hamburguesa -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+
+  <div class="header__navegacion" id="menu">
+    <nav>
+      <ul class="navegacion">
+        <li><span class="azul">#</span><a href="#inicio">inicio</a></li>
+        <li><span class="azul">#</span><a href="#proyectos">proyectos</a></li>
+        <li><span class="azul">#</span><a href="#acerca">acerca de</a></li>
+        <li><span class="azul">#</span><a href="#contacto">contactanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <!-- HERO SECTION -->
     <section class="hero contenedor">
@@ -38,145 +44,224 @@
       <a href="#contacto" class="btn">Contact me !!</a>
     </div>
     <div class="hero-img">
-      <img src="img/persona.png" alt="Persona con hoodie">
+      <img src="img/banner-hero.jpg" alt="Persona con hoodie">
       <div class="square"></div>
       <div class="square square2"></div>
     </div>
   </section>
 
   <section class="servicios__contenedor">
-    <div class="servicios__contenido contenedor">
-        <h2 class="servicios__titulo"><span class="azul">#</span>Nuestros servicios</h2>
-        <div class="servicios__lista">
-            
-            
-            <div class="servicio">
+  <div class="servicios__contenido contenedor">
+    <h2 class="servicios__titulo"><span class="azul">#</span>Nuestros servicios</h2>
+    <p class="servicios__descripcion">
+      Ofrecemos soluciones digitales diseñadas a la medida de tu negocio, combinando creatividad,
+      tecnología y estrategia para potenciar tu presencia en línea.
+    </p>
 
-                <img class="imagen_servicio" src="img/desarrollo.svg" alt="desarrollo web">
-                <h3 class="servicio__titulo">Desarrollo Web Personalizado</h3>
-                <p class="servicio__texto">Diseñamos y construimos sitios web modernos, adaptados a la identidad de cada marca, con un enfoque en funcionalidad y estética.</p>
-            </div>
+    <div class="servicios__lista">
+      <div class="servicio">
+        <img class="imagen_servicio" src="img/desarrollo.svg" alt="desarrollo web">
+        <h3 class="servicio__titulo">Desarrollo Web Personalizado</h3>
+        <p class="servicio__texto">
+          Diseñamos y construimos sitios web modernos, optimizados y adaptados a la identidad de tu marca,
+          garantizando funcionalidad y una experiencia de usuario impecable.
+        </p>
+      </div>
 
-            <div class="servicio">
+      <div class="servicio">
+        <img class="imagen_servicio" src="img/diseño.svg" alt="diseño web">
+        <h3 class="servicio__titulo">Diseño e Identidad Digital</h3>
+        <p class="servicio__texto">
+          Creamos experiencias visuales únicas que transmiten la esencia de tu negocio, cuidando cada detalle
+          de colores, tipografía y estilo para destacar en el mercado digital.
+        </p>
+      </div>
 
-                <img class="imagen_servicio" src="img/diseño.svg" alt="diseño web">
-                <h3 class="servicio__titulo">Diseño e Identidad Digital</h3>
-                <p class="servicio__texto">Creamos experiencias visuales únicas que reflejan la esencia de tu negocio, cuidando cada detalle de colores, tipografía y estilo.</p>
-            </div>
-
-            <div class="servicio">
-
-                <img class="imagen_servicio" src="img/soporte.svg" alt="soporte web">
-                <h3 class="servicio__titulo">Soporte y mantenimiento</h3>
-                <p class="servicio__texto">Te acompañamos incluso después del lanzamiento, ofreciendo actualizaciones, mejoras y asistencia técnica cuando lo necesites</p>
-            </div>
-        
-        
-        </div>
+      <div class="servicio">
+        <img class="imagen_servicio" src="img/soporte.svg" alt="soporte web">
+        <h3 class="servicio__titulo">Soporte y Mantenimiento</h3>
+        <p class="servicio__texto">
+          Te acompañamos después del lanzamiento con actualizaciones, mejoras continuas y soporte técnico
+          para mantener tu sitio siempre seguro y eficiente.
+        </p>
+      </div>
     </div>
-    
-  </section>
+  </div>
+</section>
+
+<section class="proyectos contenedor">
+  <h2 class="proyectos__titulo"><span class="azul">#</span>Proyectos</h2>
+
+  <div class="proyectos__grid">
+    <!-- Proyecto 1 -->
+    <div class="proyecto">
+      <img src="img/proyecto-spa.jpg" alt="Spa de Mascotas">
+      <h3 class="proyecto__nombre">Spa de Mascotas</h3>
+      <p class="proyecto__descripcion">Un sitio web moderno y acogedor para un spa de mascotas, mostrando servicios y reservaciones online.</p>
+      <a href="https://808code-veterinaria.netlify.app/" target="_blank" class="proyecto__boton">Ver Proyecto</a>
+    </div>
+
+    <!-- Proyecto 2 -->
+    <div class="proyecto">
+      <img src="img/proyecto-restaurante.jpg" alt="Restaurante Saludable">
+      <h3 class="proyecto__nombre">Restaurante Saludable</h3>
+      <p class="proyecto__descripcion">Página web fresca y dinámica para un restaurante saludable, con menú interactivo y ubicación en Google Maps.</p>
+      <a href="https://808code-restaurante.netlify.app/" target="_blank" class="proyecto__boton">Ver Proyecto</a>
+    </div>
+
+    <!-- Proyecto 3 -->
+    <div class="proyecto">
+      <img src="img/proyecto-portafolio.jpg" alt="Portafolio Diseñador">
+      <h3 class="proyecto__nombre">Portafolio de Diseñador</h3>
+      <p class="proyecto__descripcion">Portafolio elegante y visual para un diseñador creativo, mostrando proyectos destacados y contacto directo.</p>
+      <a href="https://808code-portafolio-diseador.netlify.app/" target="_blank" class="proyecto__boton">Ver Proyecto</a>
+    </div>
+  </div>
+</section>
 
 
-  <section class="proyectos">
-        <h2 class="proyectos__titulo"><span class="azul">#</span>Proyectos</h2>
-  </section>
+
 
 <section class="planes">
-    <h2 class="planes__titulo"><span class="azul">#</span>Planes</h2>
+  <h2 class="planes__titulo"><span class="azul">#</span>Planes</h2>
+  <p class="planes__intro">
+    Diseñamos planes pensados para cada etapa de tu proyecto.  
+    Desde una presencia rápida en internet hasta una web profesional y completa,  
+    tú eliges cómo quieres destacar en el mundo digital.
+  </p>
 
-    <div class="planes__contenedores contenedor">
-
-        <div class="plan">
-            <h3 class="plan__titulo">Plan Esencial <span class="azul">“Presencia Rápida”</span></h3>
-            <p class="plan__descripcion">
-                Ideal para quienes necesitan estar en internet de forma sencilla, rápida y económica.
-            </p>
-            <ul class="plan__caracteristicas">
-                <li>1 Página tipo Landing Page.</li>
-                <li>Hasta 3 Secciones (Ejemplo: Inicio, Servicios, Contacto).</li>
-                <li>Diseño Responsive (Adaptable a Móvil, Tablet y Desktop).</li>
-                <li>Formulario de Contacto o Enlace Directo a WhatsApp.</li>
-                <li>Integración de Redes Sociales (Facebook, Instagram, TikTok, etc.).</li>
-                <li>Entrega Rápida: 5 Días Aprox.</li>
-            </ul>
-            <button class="plan__boton">Cotizar</button>
-        </div>
-
-        <div class="plan">
-            <h2 class="plan__titulo">Plan Esencial <span class="azul">“Web Profesional”</span></h2>
-            <p class="plan__descripcion">
-                Perfecto para negocios, profesionales o proyectos que buscan una web más completa, dinámica y con proyección a futuro.
-            </p>
-            <ul class="plan__caracteristicas">
-                <li>5 Secciones (Inicio, Servicios, Proyectos, Nosotros, Contacto).</li>
-                <li>Animaciones e Interactividad con JavaScript (Menús dinámicos, Sliders, Efectos Visuales).</li>
-                <li>Optimización para Buscadores (SEO).</li>
-                <li>Optimización de Carga (Imágenes comprimidas y código limpio para mayor velocidad).</li>
-                <li>Integración de Google Maps (Si Aplica).</li>
-                <li>Soporte Extendido Durante 2 Semanas Después de la Entrega.</li>
-                <li>Entrega en 1 a 2 Semanas.</li>
-            </ul>
-            <button class="plan__boton">Cotizar</button>
-        </div>
-
+  <div class="planes__contenedores contenedor">
+    <!-- PLAN 1 -->
+    <div class="plan">
+      <h3 class="plan__titulo">Plan Esencial <span class="azul">“Presencia Rápida”</span></h3>
+      <p class="plan__descripcion">
+        Ideal si quieres estar en línea de forma sencilla y económica,  
+        con todo lo necesario para empezar a mostrar tu marca al mundo.
+      </p>
+      <ul class="plan__caracteristicas">
+        <li>✅ 1 Landing Page personalizada</li>
+        <li>✅ Hasta 3 secciones (Inicio, Servicios, Contacto)</li>
+        <li>✅ Diseño responsive (móvil, tablet y desktop)</li>
+        <li>✅ Formulario de contacto o WhatsApp directo</li>
+        <li>✅ Integración con redes sociales</li>
+        <li>✅ Entrega rápida en 5 días aprox.</li>
+      </ul>
+      <button class="plan__boton">Cotizar</button>
     </div>
 
-    <div class="planes__extra">
-        <button class="planes__info">Más Información acerca de planes</button>
+    <!-- PLAN 2 -->
+    <div class="plan">
+      <h3 class="plan__titulo">Plan Avanzado <span class="azul">“Web Profesional”</span></h3>
+      <p class="plan__descripcion">
+        Perfecto para negocios o proyectos que buscan una web completa,  
+        dinámica y lista para competir en el mercado digital.
+      </p>
+      <ul class="plan__caracteristicas">
+        <li>✅ Hasta 5 secciones (Inicio, Servicios, Proyectos, Nosotros, Contacto)</li>
+        <li>✅ Animaciones e interactividad con JavaScript</li>
+        <li>✅ Optimización SEO básica para buscadores</li>
+        <li>✅ Carga rápida con imágenes optimizadas y código limpio</li>
+        <li>✅ Integración con Google Maps (opcional)</li>
+        <li>✅ Soporte extendido por 2 semanas tras la entrega</li>
+        <li>✅ Entrega en 1 a 2 semanas</li>
+      </ul>
+      <button class="plan__boton">Cotizar</button>
     </div>
+
+    <!-- PLAN 3 -->
+    <div class="plan">
+      <h3 class="plan__titulo">Plan Premium <span class="azul">“Negocio Digital”</span></h3>
+      <p class="plan__descripcion">
+        El plan más completo, diseñado para empresas y emprendedores que  
+        buscan escalar al siguiente nivel con soluciones robustas y personalizadas.
+      </p>
+      <ul class="plan__caracteristicas">
+        <li>✅ Sitio web avanzado o Tienda Online (E-commerce)</li>
+        <li>✅ Hasta 10 secciones o páginas personalizadas</li>
+        <li>✅ Panel de administración para gestionar tu contenido</li>
+        <li>✅ Pasarelas de pago integradas (PayPal, Stripe, etc.)</li>
+        <li>✅ SEO avanzado con configuración profesional</li>
+        <li>✅ Hosting y dominio incluidos el primer año</li>
+        <li>✅ Soporte premium por 1 mes completo</li>
+        <li>✅ Entrega en 2 a 4 semanas (según complejidad)</li>
+      </ul>
+      <button class="plan__boton">Cotizar</button>
+    </div>
+  </div>
+
+  <div class="planes__extra">
+    <button class="planes__info">Más Información acerca de planes</button>
+  </div>
 </section>
+
 
 
 <section class="proceso contenedor">
-    <h2 class="proceso__titulo"><span class="azul">#</span>Proceso De Trabajo</h2>
+  <h2 class="proceso__titulo"><span class="azul">#</span> Nuestro Proceso De Trabajo</h2>
 
-    <div class="proceso__paso">
-        <div class="proceso__texto">
-            <span class="proceso__numero">1</span>
-            <h3>Escuchamos Tu Idea <span>(Entrevista)</span></h3>
-            <p>Analizamos tus necesidades y objetivos para entender qué quieres lograr con tu página web.</p>
-        </div>
-        <div class="proceso__imagen">
-            <img src="img/entrevista.jpg" alt="Entrevista con cliente">
-        </div>
+  <div class="proceso__paso">
+    <div class="proceso__texto">
+      <span class="proceso__numero">1</span>
+      <h3>Escuchamos Tu Visión <span>(Entrevista)</span></h3>
+      <p>
+        Iniciamos con una reunión para comprender a fondo tus necesidades y
+        objetivos. Queremos captar la esencia de tu idea para construir una web
+        que represente tu marca de forma auténtica y efectiva.
+      </p>
     </div>
+    <div class="proceso__imagen">
+      <img src="img/entrevista.jpg" alt="Entrevista con cliente">
+    </div>
+  </div>
 
-    <div class="proceso__paso">
-        <div class="proceso__imagen">
-            <img src="img/diseño-web.jpg" alt="Diseño web en progreso">
-        </div>
-        <div class="proceso__texto">
-            <span class="proceso__numero">2</span>
-            <h3>Diseñamos Con Identidad <span>(Diseño)</span></h3>
-            <p>Proponemos un diseño claro, moderno y alineado con la esencia de tu marca.</p>
-        </div>
+  <div class="proceso__paso">
+    <div class="proceso__imagen">
+      <img src="img/diseño-web.jpg" alt="Diseño web en progreso">
     </div>
+    <div class="proceso__texto">
+      <span class="proceso__numero">2</span>
+      <h3>Diseñamos Con Identidad <span>(Diseño)</span></h3>
+      <p>
+        Creamos un diseño moderno, limpio y funcional, cuidando cada detalle
+        visual. Nuestro enfoque es construir experiencias digitales que generen
+        confianza y transmitan la personalidad de tu negocio.
+      </p>
+    </div>
+  </div>
 
-    <div class="proceso__paso">
-        <div class="proceso__texto">
-            <span class="proceso__numero">3</span>
-            <h3>Desarrollamos Con Calidad <span>(Programación)</span></h3>
-            <p>Transformamos el diseño en una web funcional, rápida y optimizada para todos los dispositivos.</p>
-        </div>
-        <div class="proceso__imagen">
-            <img src="img/codigo.jpg" alt="Código en pantalla">
-        </div>
+  <div class="proceso__paso">
+    <div class="proceso__texto">
+      <span class="proceso__numero">3</span>
+      <h3>Desarrollamos Con Precisión <span>(Programación)</span></h3>
+      <p>
+        Convertimos el diseño en una página web ágil, segura y responsive.
+        Implementamos prácticas de calidad para garantizar un sitio optimizado
+        y escalable que soporte el crecimiento de tu proyecto.
+      </p>
     </div>
+    <div class="proceso__imagen">
+      <img src="img/codigo.jpg" alt="Código en pantalla">
+    </div>
+  </div>
 
-    <div class="proceso__paso">
-        <div class="proceso__imagen">
-            <img src="img/navegador.jpg" alt="Google abierto en laptop">
-        </div>
-        <div class="proceso__texto">
-            <span class="proceso__numero">4</span>
-            <h3>Te Acompañamos Después De La Entrega <span>(Despliegue y Mantenimiento)</span></h3>
-            <p>Brindamos soporte y actualizaciones para que tu proyecto siga creciendo.</p>
-        </div>
+  <div class="proceso__paso">
+    <div class="proceso__imagen">
+      <img src="img/navegador.jpg" alt="Google abierto en laptop">
     </div>
+    <div class="proceso__texto">
+      <span class="proceso__numero">4</span>
+      <h3>Aseguramos Tu Éxito <span>(Despliegue y Mantenimiento)</span></h3>
+      <p>
+        Te acompañamos después de la entrega con soporte continuo,
+        actualizaciones y mejoras. Nuestra meta es que tu página web evolucione
+        junto con tu negocio y mantenga su impacto en el tiempo.
+      </p>
+    </div>
+  </div>
 </section>
 
 
-
+<script src="js/toggle.js"></script>
+<script src="js/efecto1.js"></script>
 </body>
 </html>
