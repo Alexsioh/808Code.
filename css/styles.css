@@ -126,7 +126,7 @@ li, a{
 
 /* Para que el contenido no quede oculto debajo del header */
 body {
-  padding-top: 8rem; /* ajusta según la altura real del header */
+  padding-top: 5rem; /* ajusta según la altura real del header */
 }
 
 /* Logo */
