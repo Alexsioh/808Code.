@@ -1,5 +1,6 @@
 :root {
-    --fuentePrincipal: 'Fira Code', sans-serif;
+    --fuentePrincipal: "Fira Code", monospace;
+    --fuenteSecundaria: "Roboto Flex", sans-serif;
 
     /* Fondos */
     --fondoPrimario: #FFFFFF;
@@ -30,8 +31,8 @@ html{
 body{
     font-family: var(--fuentePrincipal);
     font-size: 1.6rem;
-    line-height: 2;
     
+    line-height: 1.6;
 }
 
 /* Globales*/
@@ -51,7 +52,7 @@ h1,h2,h3,h4,a{
 }
 
 h1{
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 h2{
     font-size: 2.8rem;
@@ -70,11 +71,14 @@ img{
 }
 p{
     font-size: 1.8rem;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 500;
 }
 
 li, a{
     text-decoration: none;
     list-style: none;
+    font-weight: 500;
 }
 
 .btn{
@@ -282,7 +286,34 @@ body {
     }
 }
 
+.identidad {
+  display: inline-block; /* aseguras que se trate como un bloque en línea */
+  position: relative;
+}
 
+.identidad::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* distancia del subrayado */
+  left: 0;
+  width: 100%;
+  height: 0.5rem; /* grosor */
+  background-color: black;  /*color de tu elección */
+}
+.identidad span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideIn 0.5s forwards;
+  
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 
 

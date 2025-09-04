@@ -7,7 +7,16 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<!-- Fuente Principal: Roboto Condensed-->
+ <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+
+<!-- Fuente Secundaria: Fira Code (monoespaciada) -->
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+
+<!-- Otras Fuentes para animacion: Playfair Display, Poppins, Pacifico, Orbitron, Raleway -->
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto&family=Playfair+Display&family=Poppins&family=Pacifico&family=Orbitron&family=Raleway:wght@700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/styles.css">
@@ -37,8 +46,13 @@
   <!-- HERO SECTION -->
     <section class="hero contenedor">
     <div class="hero-texto">
-      <h1>En <span class="naranja">808</span><span class="azul">Code</span>. hacemos<br> 
-      paginas web con <span class="indetidad">identidad</span></h1>
+      <h1>
+          En <span class="naranja">808</span><span class="azul">Code</span>. hacemos <br>
+          paginas web con 
+          <span class="identidad" id="identidad">
+            <span>i</span><span>d</span><span>e</span><span>n</span><span>t</span><span>i</span><span>d</span><span>a</span><span>d</span>
+          </span>
+        </h1>
       <p>Transformamos ideas en sitios web modernos, funcionales y con personalidad, 
          para que tu negocio se destaque en el mundo digital.</p>
       <a href="#contacto" class="btn">Contact me !!</a>
@@ -88,6 +102,8 @@
     </div>
   </div>
 </section>
+
+
 
 <section class="proyectos contenedor">
   <h2 class="proyectos__titulo"><span class="azul">#</span>Proyectos</h2>
@@ -263,5 +279,6 @@
 
 <script src="js/toggle.js"></script>
 <script src="js/efecto1.js"></script>
+<script src="js/efecto_identidad.js"></script>
 </body>
 </html>
